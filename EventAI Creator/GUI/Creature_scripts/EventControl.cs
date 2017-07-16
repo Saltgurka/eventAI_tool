@@ -177,9 +177,9 @@ namespace EventAI_Creator
             locked = false;
         }
 
-        private void SetInversePhaseMask(uint map)
+        private void SetInversePhaseMask(long map)
         {
-            uint bla;
+            long bla;
             for (int i = 32; i > 0; i--)
             {
                 bla = 0;
@@ -194,99 +194,102 @@ namespace EventAI_Creator
                     switch (bla)
                     {
                         case 1:
-                            this.PhaseCheckBox01.Checked = true;
+                            this.PhaseCheckBox00.Checked = true;
                             break;
                         case 2:
-                            this.PhaseCheckBox02.Checked = true;
+                            this.PhaseCheckBox01.Checked = true;
                             break;
                         case 4:
-                            this.PhaseCheckBox03.Checked = true;
+                            this.PhaseCheckBox02.Checked = true;
                             break;
                         case 8:
-                            this.PhaseCheckBox04.Checked = true;
+                            this.PhaseCheckBox03.Checked = true;
                             break;
                         case 16:
-                            this.PhaseCheckBox05.Checked = true;
+                            this.PhaseCheckBox04.Checked = true;
                             break;
                         case 32:
-                            this.PhaseCheckBox06.Checked = true;
+                            this.PhaseCheckBox05.Checked = true;
                             break;
                         case 64:
-                            this.PhaseCheckBox07.Checked = true;
+                            this.PhaseCheckBox06.Checked = true;
                             break;
                         case 128:
-                            this.PhaseCheckBox08.Checked = true;
+                            this.PhaseCheckBox07.Checked = true;
                             break;
                         case 256:
-                            this.PhaseCheckBox09.Checked = true;
+                            this.PhaseCheckBox08.Checked = true;
                             break;
                         case 512:
-                            this.PhaseCheckBox10.Checked = true;
+                            this.PhaseCheckBox09.Checked = true;
                             break;
                         case 1024:
-                            this.PhaseCheckBox11.Checked = true;
+                            this.PhaseCheckBox10.Checked = true;
                             break;
                         case 2048:
-                            this.PhaseCheckBox12.Checked = true;
+                            this.PhaseCheckBox11.Checked = true;
                             break;
                         case 4096:
-                            this.PhaseCheckBox13.Checked = true;
+                            this.PhaseCheckBox12.Checked = true;
                             break;
                         case 8192:
-                            this.PhaseCheckBox14.Checked = true;
+                            this.PhaseCheckBox13.Checked = true;
                             break;
                         case 16384:
-                            this.PhaseCheckBox15.Checked = true;
+                            this.PhaseCheckBox14.Checked = true;
                             break;
                         case 32768:
-                            this.PhaseCheckBox16.Checked = true;
+                            this.PhaseCheckBox15.Checked = true;
                             break;
                         case 65536:
-                            this.PhaseCheckBox17.Checked = true;
+                            this.PhaseCheckBox16.Checked = true;
                             break;
                         case 131072:
-                            this.PhaseCheckBox18.Checked = true;
+                            this.PhaseCheckBox17.Checked = true;
                             break;
                         case 262144:
-                            this.PhaseCheckBox19.Checked = true;
+                            this.PhaseCheckBox18.Checked = true;
                             break;
                         case 524288:
-                            this.PhaseCheckBox20.Checked = true;
+                            this.PhaseCheckBox19.Checked = true;
                             break;
                         case 1048576:
-                            this.PhaseCheckBox21.Checked = true;
+                            this.PhaseCheckBox20.Checked = true;
                             break;
                         case 2097152:
-                            this.PhaseCheckBox22.Checked = true;
+                            this.PhaseCheckBox21.Checked = true;
                             break;
                         case 4194304:
-                            this.PhaseCheckBox23.Checked = true;
+                            this.PhaseCheckBox22.Checked = true;
                             break;
                         case 8388608:
-                            this.PhaseCheckBox24.Checked = true;
+                            this.PhaseCheckBox23.Checked = true;
                             break;
                         case 16777216:
-                            this.PhaseCheckBox25.Checked = true;
+                            this.PhaseCheckBox24.Checked = true;
                             break;
                         case 33554432:
-                            this.PhaseCheckBox26.Checked = true;
+                            this.PhaseCheckBox25.Checked = true;
                             break;
                         case 67108864:
-                            this.PhaseCheckBox27.Checked = true;
+                            this.PhaseCheckBox26.Checked = true;
                             break;
                         case 134217728:
-                            this.PhaseCheckBox28.Checked = true;
+                            this.PhaseCheckBox27.Checked = true;
                             break;
                         case 268435456:
-                            this.PhaseCheckBox29.Checked = true;
+                            this.PhaseCheckBox28.Checked = true;
                             break;
                         case 536870912:
-                            this.PhaseCheckBox30.Checked = true;
+                            this.PhaseCheckBox29.Checked = true;
                             break;
                         case 1073741824:
-                            this.PhaseCheckBox31.Checked = true;
+                            this.PhaseCheckBox30.Checked = true;
                             break;
                         case 2147483648:
+                            this.PhaseCheckBox31.Checked = true;
+                            break;
+                        case 4294967296:
                             this.PhaseCheckBox32.Checked = true;
                             break;
                     }
@@ -301,71 +304,72 @@ namespace EventAI_Creator
 
         public Event_dataset GetEventData()
         {
-                Event_dataset Data = new Event_dataset();
+            Event_dataset Data = new Event_dataset();
 
-                Data.action1_type = this.Action1TypeCBox.SelectedIndex;
-                if (Action1Param1Tbox.Text.Length != 0 && Action1Param1Tbox.Text != "-") Data.action1_param1 = System.Convert.ToInt64(this.Action1Param1Tbox.Text);
-                if (Action1Param2Tbox.Text.Length != 0 && Action1Param2Tbox.Text != "-") Data.action1_param2 = System.Convert.ToInt32(this.Action1Param2Tbox.Text);
-                if (Action1Param3Tbox.Text.Length != 0 && Action1Param3Tbox.Text != "-") Data.action1_param3 = System.Convert.ToInt32(this.Action1Param3Tbox.Text);
+            Data.action1_type = this.Action1TypeCBox.SelectedIndex;
+            if (Action1Param1Tbox.Text.Length != 0 && Action1Param1Tbox.Text != "-") Data.action1_param1 = System.Convert.ToInt64(this.Action1Param1Tbox.Text);
+            if (Action1Param2Tbox.Text.Length != 0 && Action1Param2Tbox.Text != "-") Data.action1_param2 = System.Convert.ToInt32(this.Action1Param2Tbox.Text);
+            if (Action1Param3Tbox.Text.Length != 0 && Action1Param3Tbox.Text != "-") Data.action1_param3 = System.Convert.ToInt32(this.Action1Param3Tbox.Text);
 
-                Data.action2_type = this.Action2TypeCBox.SelectedIndex;
-                if (Action2Param1Tbox.Text.Length != 0 && Action2Param1Tbox.Text != "-") Data.action2_param1 = System.Convert.ToInt64(this.Action2Param1Tbox.Text);
-                if (Action2Param2Tbox.Text.Length != 0 && Action2Param2Tbox.Text != "-") Data.action2_param2 = System.Convert.ToInt32(this.Action2Param2Tbox.Text);
-                if (Action2Param3Tbox.Text.Length != 0 && Action2Param3Tbox.Text != "-") Data.action2_param3 = System.Convert.ToInt32(this.Action2Param3Tbox.Text);
+            Data.action2_type = this.Action2TypeCBox.SelectedIndex;
+            if (Action2Param1Tbox.Text.Length != 0 && Action2Param1Tbox.Text != "-") Data.action2_param1 = System.Convert.ToInt64(this.Action2Param1Tbox.Text);
+            if (Action2Param2Tbox.Text.Length != 0 && Action2Param2Tbox.Text != "-") Data.action2_param2 = System.Convert.ToInt32(this.Action2Param2Tbox.Text);
+            if (Action2Param3Tbox.Text.Length != 0 && Action2Param3Tbox.Text != "-") Data.action2_param3 = System.Convert.ToInt32(this.Action2Param3Tbox.Text);
 
-                Data.action3_type = this.Action3TypeCBox.SelectedIndex;
-                if (Action3Param1Tbox.Text.Length != 0 && Action3Param1Tbox.Text != "-") Data.action3_param1 = System.Convert.ToInt64(this.Action3Param1Tbox.Text);
-                if (Action3Param2Tbox.Text.Length != 0 && Action3Param2Tbox.Text != "-") Data.action3_param2 = System.Convert.ToInt32(this.Action3Param2Tbox.Text);
-                if (Action3Param3Tbox.Text.Length != 0 && Action3Param3Tbox.Text != "-") Data.action3_param3 = System.Convert.ToInt32(this.Action3Param3Tbox.Text);
+            Data.action3_type = this.Action3TypeCBox.SelectedIndex;
+            if (Action3Param1Tbox.Text.Length != 0 && Action3Param1Tbox.Text != "-") Data.action3_param1 = System.Convert.ToInt64(this.Action3Param1Tbox.Text);
+            if (Action3Param2Tbox.Text.Length != 0 && Action3Param2Tbox.Text != "-") Data.action3_param2 = System.Convert.ToInt32(this.Action3Param2Tbox.Text);
+            if (Action3Param3Tbox.Text.Length != 0 && Action3Param3Tbox.Text != "-") Data.action3_param3 = System.Convert.ToInt32(this.Action3Param3Tbox.Text);
 
-                Data.event_type = this.EventTypeCBox.SelectedIndex;
-                if (EventParam1.Text.Length != 0 && EventParam1.Text != "-") Data.event_param1 = System.Convert.ToInt32(this.EventParam1.Text);
-                if (EventParam2.Text.Length != 0 && EventParam2.Text != "-") Data.event_param2 = System.Convert.ToInt32(this.EventParam2.Text);
-                if (EventParam3.Text.Length != 0 && EventParam3.Text != "-") Data.event_param3 = System.Convert.ToInt32(this.EventParam3.Text);
-                if (EventParam4.Text.Length != 0 && EventParam4.Text != "-") Data.event_param4 = System.Convert.ToInt32(this.EventParam4.Text);
+            Data.event_type = this.EventTypeCBox.SelectedIndex;
+            if (EventParam1.Text.Length != 0 && EventParam1.Text != "-") Data.event_param1 = System.Convert.ToInt32(this.EventParam1.Text);
+            if (EventParam2.Text.Length != 0 && EventParam2.Text != "-") Data.event_param2 = System.Convert.ToInt32(this.EventParam2.Text);
+            if (EventParam3.Text.Length != 0 && EventParam3.Text != "-") Data.event_param3 = System.Convert.ToInt32(this.EventParam3.Text);
+            if (EventParam4.Text.Length != 0 && EventParam4.Text != "-") Data.event_param4 = System.Convert.ToInt32(this.EventParam4.Text);
 
-                if (EventChanceTBox.Text.Length != 0 && EventChanceTBox.Text != "-") Data.event_chance = System.Convert.ToInt32(this.EventChanceTBox.Text);
-                if (EventFlagTBox.Text.Length != 0 && EventFlagTBox.Text != "-") Data.event_flags = System.Convert.ToInt32(this.EventFlagTBox.Text);
-                if (txtBoxComment.Text.Length != 0 && txtBoxComment.Text != "-") Data.comment = this.txtBoxComment.Text;
+            if (EventChanceTBox.Text.Length != 0 && EventChanceTBox.Text != "-") Data.event_chance = System.Convert.ToInt32(this.EventChanceTBox.Text);
+            if (EventFlagTBox.Text.Length != 0 && EventFlagTBox.Text != "-") Data.event_flags = System.Convert.ToInt32(this.EventFlagTBox.Text);
+            if (txtBoxComment.Text.Length != 0 && txtBoxComment.Text != "-") Data.comment = this.txtBoxComment.Text;
 
-                Data.event_inverse_phase_mask = 0;
+            Data.event_inverse_phase_mask = 0;
 
-                if (this.PhaseCheckBox01.Checked) Data.event_inverse_phase_mask += 1;
-                if (this.PhaseCheckBox02.Checked) Data.event_inverse_phase_mask += 2;
-                if (this.PhaseCheckBox03.Checked) Data.event_inverse_phase_mask += 4;
-                if (this.PhaseCheckBox04.Checked) Data.event_inverse_phase_mask += 8;
-                if (this.PhaseCheckBox05.Checked) Data.event_inverse_phase_mask += 16;
-                if (this.PhaseCheckBox06.Checked) Data.event_inverse_phase_mask += 32;
-                if (this.PhaseCheckBox07.Checked) Data.event_inverse_phase_mask += 64;
-                if (this.PhaseCheckBox08.Checked) Data.event_inverse_phase_mask += 128;
-                if (this.PhaseCheckBox09.Checked) Data.event_inverse_phase_mask += 256;
-                if (this.PhaseCheckBox10.Checked) Data.event_inverse_phase_mask += 512;
-                if (this.PhaseCheckBox11.Checked) Data.event_inverse_phase_mask += 1024;
-                if (this.PhaseCheckBox12.Checked) Data.event_inverse_phase_mask += 2048;
-                if (this.PhaseCheckBox13.Checked) Data.event_inverse_phase_mask += 4096;
-                if (this.PhaseCheckBox14.Checked) Data.event_inverse_phase_mask += 8192;
-                if (this.PhaseCheckBox15.Checked) Data.event_inverse_phase_mask += 16384;
-                if (this.PhaseCheckBox16.Checked) Data.event_inverse_phase_mask += 32768;
-                if (this.PhaseCheckBox17.Checked) Data.event_inverse_phase_mask += 65536;
-                if (this.PhaseCheckBox18.Checked) Data.event_inverse_phase_mask += 131072;
-                if (this.PhaseCheckBox19.Checked) Data.event_inverse_phase_mask += 262144;
-                if (this.PhaseCheckBox20.Checked) Data.event_inverse_phase_mask += 524288;
-                if (this.PhaseCheckBox21.Checked) Data.event_inverse_phase_mask += 1048576;
-                if (this.PhaseCheckBox22.Checked) Data.event_inverse_phase_mask += 2097152;
-                if (this.PhaseCheckBox23.Checked) Data.event_inverse_phase_mask += 4194304;
-                if (this.PhaseCheckBox24.Checked) Data.event_inverse_phase_mask += 8388608;
-                if (this.PhaseCheckBox25.Checked) Data.event_inverse_phase_mask += 16777216;
-                if (this.PhaseCheckBox26.Checked) Data.event_inverse_phase_mask += 33554432;
-                if (this.PhaseCheckBox27.Checked) Data.event_inverse_phase_mask += 67108864;
-                if (this.PhaseCheckBox28.Checked) Data.event_inverse_phase_mask += 134217728;
-                if (this.PhaseCheckBox29.Checked) Data.event_inverse_phase_mask += 268435456;
-                if (this.PhaseCheckBox30.Checked) Data.event_inverse_phase_mask += 536870912;
-                if (this.PhaseCheckBox31.Checked) Data.event_inverse_phase_mask += 1073741824;
-                if (this.PhaseCheckBox32.Checked) Data.event_inverse_phase_mask += 2147483648;
+            if (this.PhaseCheckBox00.Checked) Data.event_inverse_phase_mask += 1;
+            if (this.PhaseCheckBox01.Checked) Data.event_inverse_phase_mask += 2;
+            if (this.PhaseCheckBox02.Checked) Data.event_inverse_phase_mask += 4;
+            if (this.PhaseCheckBox03.Checked) Data.event_inverse_phase_mask += 8;
+            if (this.PhaseCheckBox04.Checked) Data.event_inverse_phase_mask += 16;
+            if (this.PhaseCheckBox05.Checked) Data.event_inverse_phase_mask += 32;
+            if (this.PhaseCheckBox06.Checked) Data.event_inverse_phase_mask += 64;
+            if (this.PhaseCheckBox07.Checked) Data.event_inverse_phase_mask += 128;
+            if (this.PhaseCheckBox08.Checked) Data.event_inverse_phase_mask += 256;
+            if (this.PhaseCheckBox09.Checked) Data.event_inverse_phase_mask += 512;
+            if (this.PhaseCheckBox10.Checked) Data.event_inverse_phase_mask += 1024;
+            if (this.PhaseCheckBox11.Checked) Data.event_inverse_phase_mask += 2048;
+            if (this.PhaseCheckBox12.Checked) Data.event_inverse_phase_mask += 4096;
+            if (this.PhaseCheckBox13.Checked) Data.event_inverse_phase_mask += 8192;
+            if (this.PhaseCheckBox14.Checked) Data.event_inverse_phase_mask += 16384;
+            if (this.PhaseCheckBox15.Checked) Data.event_inverse_phase_mask += 32768;
+            if (this.PhaseCheckBox16.Checked) Data.event_inverse_phase_mask += 65536;
+            if (this.PhaseCheckBox17.Checked) Data.event_inverse_phase_mask += 131072;
+            if (this.PhaseCheckBox18.Checked) Data.event_inverse_phase_mask += 262144;
+            if (this.PhaseCheckBox19.Checked) Data.event_inverse_phase_mask += 524288;
+            if (this.PhaseCheckBox20.Checked) Data.event_inverse_phase_mask += 1048576;
+            if (this.PhaseCheckBox21.Checked) Data.event_inverse_phase_mask += 2097152;
+            if (this.PhaseCheckBox22.Checked) Data.event_inverse_phase_mask += 4194304;
+            if (this.PhaseCheckBox23.Checked) Data.event_inverse_phase_mask += 8388608;
+            if (this.PhaseCheckBox24.Checked) Data.event_inverse_phase_mask += 16777216;
+            if (this.PhaseCheckBox25.Checked) Data.event_inverse_phase_mask += 33554432;
+            if (this.PhaseCheckBox26.Checked) Data.event_inverse_phase_mask += 67108864;
+            if (this.PhaseCheckBox27.Checked) Data.event_inverse_phase_mask += 134217728;
+            if (this.PhaseCheckBox28.Checked) Data.event_inverse_phase_mask += 268435456;
+            if (this.PhaseCheckBox29.Checked) Data.event_inverse_phase_mask += 536870912;
+            if (this.PhaseCheckBox30.Checked) Data.event_inverse_phase_mask += 1073741824;
+            if (this.PhaseCheckBox31.Checked) Data.event_inverse_phase_mask += 2147483648;
+            if (this.PhaseCheckBox32.Checked) Data.event_inverse_phase_mask += 4294967296;
 
-                creatures.npcList[creature_id].line[eventid] = Data;
-                creatures.npcList[creature_id].changed = true;
-                return Data;
+            creatures.npcList[creature_id].line[eventid] = Data;
+            creatures.npcList[creature_id].changed = true;
+            return Data;
         }
 
         private void EventTypeCBox_SelectedIndexChanged(object sender, EventArgs e)

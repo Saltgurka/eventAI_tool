@@ -20,7 +20,7 @@ namespace EventAI_Creator
         public int script_id;
 
         public int event_type;
-        public UInt32 event_inverse_phase_mask;
+        public long event_inverse_phase_mask;
         public int event_chance;
         public int event_flags;
         public int event_param1;

@@ -98,6 +98,10 @@ namespace EventAI_Creator
 /*46 | 01 */{"SET_THROW_MASK","EventTypeMask","","","Marks for which AIEvents the npc will throw AIEvents on its own."},
 /*47 | 01 */{"SET_STAND_STATE","StandState","","","Set the unit stand state (Param1) of the current creature."},
 /*48 | 01 */{"CHANGE_MOVEMENT","MovementType","WanderDistance","","Change the unit movement type (Param1). If the movement type is Random Movement (1), the WanderDistance (Param2) must be provided."},
+/*49 | 01 */{"ACTION_T_DYNAMIC_MOVEMENT","EnableDynamicMovement","","","Enable dynamic movement behavior (1 = on; 0 = off)" },
+/*50 | 01 */{"ACTION_T_SET_REACT_STAT","ReactState","","","Change react state of the creature" },
+/*51 | 01 */{"ACTION_T_PAUSE_WAYPOINTS","DoPause","","","Pause waypoints of creature" },
+/*52 | 01 */{"ACTION_T_INTERRUPT_SPELL","SpellType - CurrentSpellTypes","","","Interrupt spell in given slot for creature" },
         };
 
         public static string[] EventFlags = new string[]

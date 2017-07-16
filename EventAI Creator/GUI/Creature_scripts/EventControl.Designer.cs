@@ -47,6 +47,7 @@
             this.lblphasemask = new System.Windows.Forms.Label();
             this.EventParam4 = new System.Windows.Forms.TextBox();
             this.groupBoxevent = new System.Windows.Forms.GroupBox();
+            this.EventParam1ComboBox = new System.Windows.Forms.ComboBox();
             this.button_spell_mask = new System.Windows.Forms.Button();
             this.button_flag_select = new System.Windows.Forms.Button();
             this.groupBoxAction1 = new System.Windows.Forms.GroupBox();
@@ -130,7 +131,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.expand = new System.Windows.Forms.CheckBox();
             this.deleteevent = new System.Windows.Forms.Button();
-            this.EventParam1ComboBox = new System.Windows.Forms.ComboBox();
+            this.PhaseCheckBox00 = new System.Windows.Forms.CheckBox();
             this.groupBoxevent.SuspendLayout();
             this.groupBoxAction1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -332,6 +333,16 @@
             this.groupBoxevent.TabIndex = 18;
             this.groupBoxevent.TabStop = false;
             this.groupBoxevent.Text = "Event Settings";
+            // 
+            // EventParam1ComboBox
+            // 
+            this.EventParam1ComboBox.FormattingEnabled = true;
+            this.EventParam1ComboBox.Location = new System.Drawing.Point(68, 40);
+            this.EventParam1ComboBox.Name = "EventParam1ComboBox";
+            this.EventParam1ComboBox.Size = new System.Drawing.Size(100, 21);
+            this.EventParam1ComboBox.TabIndex = 30;
+            this.EventParam1ComboBox.Visible = false;
+            this.EventParam1ComboBox.SelectedIndexChanged += new System.EventHandler(this.EventParam1ComboBox_SelectedIndexChanged);
             // 
             // button_spell_mask
             // 
@@ -1262,21 +1273,22 @@
             this.deleteevent.UseVisualStyleBackColor = true;
             this.deleteevent.Click += new System.EventHandler(this.deleteevent_Click);
             // 
-            // EventParam1ComboBox
+            // PhaseCheckBox00
             // 
-            this.EventParam1ComboBox.FormattingEnabled = true;
-            this.EventParam1ComboBox.Location = new System.Drawing.Point(68, 40);
-            this.EventParam1ComboBox.Name = "EventParam1ComboBox";
-            this.EventParam1ComboBox.Size = new System.Drawing.Size(100, 21);
-            this.EventParam1ComboBox.TabIndex = 30;
-            this.EventParam1ComboBox.Visible = false;
-            this.EventParam1ComboBox.SelectedIndexChanged += new System.EventHandler(this.EventParam1ComboBox_SelectedIndexChanged);
+            this.PhaseCheckBox00.AutoSize = true;
+            this.PhaseCheckBox00.Location = new System.Drawing.Point(39, 248);
+            this.PhaseCheckBox00.Name = "PhaseCheckBox00";
+            this.PhaseCheckBox00.Size = new System.Drawing.Size(38, 17);
+            this.PhaseCheckBox00.TabIndex = 69;
+            this.PhaseCheckBox00.Text = "00";
+            this.PhaseCheckBox00.UseVisualStyleBackColor = true;
             // 
             // EventControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.PhaseCheckBox00);
             this.Controls.Add(this.deleteevent);
             this.Controls.Add(this.expand);
             this.Controls.Add(this.PhaseMaskInfoLb);
@@ -1439,5 +1451,6 @@
         private System.Windows.Forms.ComboBox Action2Param3Combobox;
         private System.Windows.Forms.ComboBox Action3Param3Combobox;
         private System.Windows.Forms.ComboBox EventParam1ComboBox;
+        private System.Windows.Forms.CheckBox PhaseCheckBox00;
     }
 }
