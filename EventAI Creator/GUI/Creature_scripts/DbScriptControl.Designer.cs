@@ -77,6 +77,8 @@
             this.label_tar = new System.Windows.Forms.Label();
             this.label_source = new System.Windows.Forms.Label();
             this.label_src = new System.Windows.Forms.Label();
+            this.comboBox_datalong3 = new System.Windows.Forms.ComboBox();
+            this.label_datalong3 = new System.Windows.Forms.Label();
             this.groupBoxEvent.SuspendLayout();
             this.groupBoxMain.SuspendLayout();
             this.groupBoxDataInt.SuspendLayout();
@@ -99,7 +101,7 @@
             // 
             this.commentTextbox.Location = new System.Drawing.Point(166, 27);
             this.commentTextbox.Name = "commentTextbox";
-            this.commentTextbox.Size = new System.Drawing.Size(372, 20);
+            this.commentTextbox.Size = new System.Drawing.Size(429, 20);
             this.commentTextbox.TabIndex = 1;
             this.commentTextbox.Text = "Comment";
             this.commentTextbox.Leave += new System.EventHandler(this.txtBox_comment_leave);
@@ -154,6 +156,8 @@
             // 
             // groupBoxMain
             // 
+            this.groupBoxMain.Controls.Add(this.comboBox_datalong3);
+            this.groupBoxMain.Controls.Add(this.label_datalong3);
             this.groupBoxMain.Controls.Add(this.comboBox_datalong2);
             this.groupBoxMain.Controls.Add(this.comboBox_datalong);
             this.groupBoxMain.Controls.Add(this.button_datalong);
@@ -171,7 +175,7 @@
             this.groupBoxMain.Controls.Add(this.textBox_datalong);
             this.groupBoxMain.Location = new System.Drawing.Point(166, 52);
             this.groupBoxMain.Name = "groupBoxMain";
-            this.groupBoxMain.Size = new System.Drawing.Size(372, 104);
+            this.groupBoxMain.Size = new System.Drawing.Size(429, 146);
             this.groupBoxMain.TabIndex = 3;
             this.groupBoxMain.TabStop = false;
             this.groupBoxMain.Text = "Main Flags";
@@ -181,7 +185,7 @@
             this.comboBox_datalong2.FormattingEnabled = true;
             this.comboBox_datalong2.Location = new System.Drawing.Point(6, 73);
             this.comboBox_datalong2.Name = "comboBox_datalong2";
-            this.comboBox_datalong2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_datalong2.Size = new System.Drawing.Size(161, 21);
             this.comboBox_datalong2.TabIndex = 14;
             this.comboBox_datalong2.Visible = false;
             this.comboBox_datalong2.SelectedIndexChanged += new System.EventHandler(this.comboBox_datalong2_SelectedIndexChanged);
@@ -191,7 +195,7 @@
             this.comboBox_datalong.FormattingEnabled = true;
             this.comboBox_datalong.Location = new System.Drawing.Point(6, 33);
             this.comboBox_datalong.Name = "comboBox_datalong";
-            this.comboBox_datalong.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_datalong.Size = new System.Drawing.Size(161, 21);
             this.comboBox_datalong.TabIndex = 13;
             this.comboBox_datalong.Visible = false;
             this.comboBox_datalong.SelectedIndexChanged += new System.EventHandler(this.comboBox_datalong_SelectedIndexChanged);
@@ -219,7 +223,7 @@
             // 
             // button_flags
             // 
-            this.button_flags.Location = new System.Drawing.Point(312, 66);
+            this.button_flags.Location = new System.Drawing.Point(373, 75);
             this.button_flags.Name = "button_flags";
             this.button_flags.Size = new System.Drawing.Size(50, 20);
             this.button_flags.TabIndex = 10;
@@ -230,7 +234,7 @@
             // label_flags
             // 
             this.label_flags.AutoSize = true;
-            this.label_flags.Location = new System.Drawing.Point(112, 73);
+            this.label_flags.Location = new System.Drawing.Point(173, 82);
             this.label_flags.Name = "label_flags";
             this.label_flags.Size = new System.Drawing.Size(58, 13);
             this.label_flags.TabIndex = 9;
@@ -239,7 +243,7 @@
             // label_radius
             // 
             this.label_radius.AutoSize = true;
-            this.label_radius.Location = new System.Drawing.Point(112, 46);
+            this.label_radius.Location = new System.Drawing.Point(173, 55);
             this.label_radius.Name = "label_radius";
             this.label_radius.Size = new System.Drawing.Size(103, 13);
             this.label_radius.TabIndex = 8;
@@ -248,7 +252,7 @@
             // label_buddy
             // 
             this.label_buddy.AutoSize = true;
-            this.label_buddy.Location = new System.Drawing.Point(112, 19);
+            this.label_buddy.Location = new System.Drawing.Point(173, 28);
             this.label_buddy.Name = "label_buddy";
             this.label_buddy.Size = new System.Drawing.Size(144, 13);
             this.label_buddy.TabIndex = 7;
@@ -273,7 +277,7 @@
             // 
             // textBox_flags
             // 
-            this.textBox_flags.Location = new System.Drawing.Point(262, 66);
+            this.textBox_flags.Location = new System.Drawing.Point(323, 75);
             this.textBox_flags.Name = "textBox_flags";
             this.textBox_flags.Size = new System.Drawing.Size(50, 20);
             this.textBox_flags.TabIndex = 4;
@@ -281,7 +285,7 @@
             // 
             // textBox_radius
             // 
-            this.textBox_radius.Location = new System.Drawing.Point(262, 41);
+            this.textBox_radius.Location = new System.Drawing.Point(323, 50);
             this.textBox_radius.Name = "textBox_radius";
             this.textBox_radius.Size = new System.Drawing.Size(100, 20);
             this.textBox_radius.TabIndex = 3;
@@ -289,7 +293,7 @@
             // 
             // textBox_buddy
             // 
-            this.textBox_buddy.Location = new System.Drawing.Point(262, 16);
+            this.textBox_buddy.Location = new System.Drawing.Point(323, 25);
             this.textBox_buddy.Name = "textBox_buddy";
             this.textBox_buddy.Size = new System.Drawing.Size(100, 20);
             this.textBox_buddy.TabIndex = 2;
@@ -322,7 +326,7 @@
             this.groupBoxDataInt.Controls.Add(this.textBox_dataint3);
             this.groupBoxDataInt.Controls.Add(this.textBox_dataint2);
             this.groupBoxDataInt.Controls.Add(this.textBox_dataint1);
-            this.groupBoxDataInt.Location = new System.Drawing.Point(16, 162);
+            this.groupBoxDataInt.Location = new System.Drawing.Point(16, 204);
             this.groupBoxDataInt.Name = "groupBoxDataInt";
             this.groupBoxDataInt.Size = new System.Drawing.Size(445, 60);
             this.groupBoxDataInt.TabIndex = 4;
@@ -411,7 +415,7 @@
             this.groupBoxPosition.Controls.Add(this.textBox_posZ);
             this.groupBoxPosition.Controls.Add(this.textBox_posY);
             this.groupBoxPosition.Controls.Add(this.textBox_posX);
-            this.groupBoxPosition.Location = new System.Drawing.Point(16, 228);
+            this.groupBoxPosition.Location = new System.Drawing.Point(16, 270);
             this.groupBoxPosition.Name = "groupBoxPosition";
             this.groupBoxPosition.Size = new System.Drawing.Size(445, 62);
             this.groupBoxPosition.TabIndex = 5;
@@ -493,7 +497,7 @@
             // button_delete_event
             // 
             this.button_delete_event.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_delete_event.Location = new System.Drawing.Point(469, 0);
+            this.button_delete_event.Location = new System.Drawing.Point(514, 0);
             this.button_delete_event.Name = "button_delete_event";
             this.button_delete_event.Size = new System.Drawing.Size(84, 20);
             this.button_delete_event.TabIndex = 6;
@@ -509,9 +513,9 @@
             this.groupBox_details.Controls.Add(this.label_tar);
             this.groupBox_details.Controls.Add(this.label_source);
             this.groupBox_details.Controls.Add(this.label_src);
-            this.groupBox_details.Location = new System.Drawing.Point(469, 162);
+            this.groupBox_details.Location = new System.Drawing.Point(469, 204);
             this.groupBox_details.Name = "groupBox_details";
-            this.groupBox_details.Size = new System.Drawing.Size(69, 128);
+            this.groupBox_details.Size = new System.Drawing.Size(126, 128);
             this.groupBox_details.TabIndex = 7;
             this.groupBox_details.TabStop = false;
             this.groupBox_details.Text = "Details";
@@ -573,6 +577,24 @@
             this.label_src.TabIndex = 0;
             this.label_src.Text = "Source:";
             // 
+            // comboBox_datalong3
+            // 
+            this.comboBox_datalong3.FormattingEnabled = true;
+            this.comboBox_datalong3.Location = new System.Drawing.Point(6, 115);
+            this.comboBox_datalong3.Name = "comboBox_datalong3";
+            this.comboBox_datalong3.Size = new System.Drawing.Size(161, 21);
+            this.comboBox_datalong3.TabIndex = 16;
+            this.comboBox_datalong3.Visible = false;
+            // 
+            // label_datalong3
+            // 
+            this.label_datalong3.AutoSize = true;
+            this.label_datalong3.Location = new System.Drawing.Point(6, 99);
+            this.label_datalong3.Name = "label_datalong3";
+            this.label_datalong3.Size = new System.Drawing.Size(56, 13);
+            this.label_datalong3.TabIndex = 15;
+            this.label_datalong3.Text = "Datalong3";
+            // 
             // DbScriptControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,7 +608,7 @@
             this.Controls.Add(this.commentTextbox);
             this.Controls.Add(this.eventCheckbox);
             this.Name = "DbScriptControl";
-            this.Size = new System.Drawing.Size(553, 305);
+            this.Size = new System.Drawing.Size(598, 345);
             this.groupBoxEvent.ResumeLayout(false);
             this.groupBoxEvent.PerformLayout();
             this.groupBoxMain.ResumeLayout(false);
@@ -653,5 +675,7 @@
         private System.Windows.Forms.Button button_datalong;
         private System.Windows.Forms.ComboBox comboBox_datalong;
         private System.Windows.Forms.ComboBox comboBox_datalong2;
+        private System.Windows.Forms.ComboBox comboBox_datalong3;
+        private System.Windows.Forms.Label label_datalong3;
     }
 }
