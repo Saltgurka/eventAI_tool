@@ -232,9 +232,9 @@ namespace EventAI_Creator
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
             if (bIsCreature)
-                System.Diagnostics.Process.Start("https://raw.github.com/mangos/mangos/master/doc/EventAI.txt");
+                System.Diagnostics.Process.Start("https://raw.githubusercontent.com/cmangos/mangos-wotlk/master/doc/EventAI.txt");
             else
-                System.Diagnostics.Process.Start("https://raw.github.com/mangos/mangos/master/doc/script_commands.txt");
+                System.Diagnostics.Process.Start("https://raw.githubusercontent.com/cmangos/mangos-wotlk/master/doc/script_commands.txt");
         }
 
         // Query window button

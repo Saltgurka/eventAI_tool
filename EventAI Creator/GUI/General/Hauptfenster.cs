@@ -360,9 +360,9 @@ namespace EventAI_Creator
         private void help_toolstrip_button_Click(object sender, EventArgs e)
         {
             if (comboBox_script_type.SelectedIndex == 0)
-                System.Diagnostics.Process.Start("https://raw.github.com/mangos/mangos/master/doc/EventAI.txt");
+                System.Diagnostics.Process.Start("https://raw.githubusercontent.com/cmangos/mangos-wotlk/master/doc/EventAI.txt");
             else
-                System.Diagnostics.Process.Start("https://raw.github.com/mangos/mangos/master/doc/script_commands.txt");
+                System.Diagnostics.Process.Start("https://raw.githubusercontent.com/cmangos/mangos-wotlk/master/doc/script_commands.txt");
         }
 
         private void db_scripts_button_Click(object sender, EventArgs e)
