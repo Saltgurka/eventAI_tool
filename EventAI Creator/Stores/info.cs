@@ -184,7 +184,7 @@ namespace EventAI_Creator
         {
             "UNIT_FLAG_UNK_0",
             "UNIT_FLAG_NON_ATTACKABLE",
-            "UNIT_FLAG_DISABLE_MOVE",
+            "UNIT_FLAG_NON_MOVING_DEPRECATED",
             "UNIT_FLAG_PVP_ATTACKABLE",
             "UNIT_FLAG_RENAME",
             "UNIT_FLAG_PREPARATION",
@@ -206,7 +206,7 @@ namespace EventAI_Creator
             "UNIT_FLAG_DISARMED",
             "UNIT_FLAG_CONFUSED",
             "UNIT_FLAG_FLEEING",
-            "UNIT_FLAG_PLAYER_CONTROLLED",
+            "UNIT_FLAG_POSSESSED",
             "UNIT_FLAG_NOT_SELECTABLE",
             "UNIT_FLAG_SKINNABLE",
             "UNIT_FLAG_MOUNT",
