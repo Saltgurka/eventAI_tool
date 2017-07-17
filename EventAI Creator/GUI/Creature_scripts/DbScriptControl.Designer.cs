@@ -79,6 +79,8 @@
             this.label_src = new System.Windows.Forms.Label();
             this.comboBox_datalong3 = new System.Windows.Forms.ComboBox();
             this.label_datalong3 = new System.Windows.Forms.Label();
+            this.button_datalong3 = new System.Windows.Forms.Button();
+            this.textBox_datalong3 = new System.Windows.Forms.TextBox();
             this.groupBoxEvent.SuspendLayout();
             this.groupBoxMain.SuspendLayout();
             this.groupBoxDataInt.SuspendLayout();
@@ -156,10 +158,7 @@
             // 
             // groupBoxMain
             // 
-            this.groupBoxMain.Controls.Add(this.comboBox_datalong3);
             this.groupBoxMain.Controls.Add(this.label_datalong3);
-            this.groupBoxMain.Controls.Add(this.comboBox_datalong2);
-            this.groupBoxMain.Controls.Add(this.comboBox_datalong);
             this.groupBoxMain.Controls.Add(this.button_datalong);
             this.groupBoxMain.Controls.Add(this.button_datalong2);
             this.groupBoxMain.Controls.Add(this.button_flags);
@@ -173,6 +172,11 @@
             this.groupBoxMain.Controls.Add(this.textBox_buddy);
             this.groupBoxMain.Controls.Add(this.label_datalong);
             this.groupBoxMain.Controls.Add(this.textBox_datalong);
+            this.groupBoxMain.Controls.Add(this.button_datalong3);
+            this.groupBoxMain.Controls.Add(this.textBox_datalong3);
+            this.groupBoxMain.Controls.Add(this.comboBox_datalong3);
+            this.groupBoxMain.Controls.Add(this.comboBox_datalong2);
+            this.groupBoxMain.Controls.Add(this.comboBox_datalong);
             this.groupBoxMain.Location = new System.Drawing.Point(166, 52);
             this.groupBoxMain.Name = "groupBoxMain";
             this.groupBoxMain.Size = new System.Drawing.Size(429, 146);
@@ -183,7 +187,7 @@
             // comboBox_datalong2
             // 
             this.comboBox_datalong2.FormattingEnabled = true;
-            this.comboBox_datalong2.Location = new System.Drawing.Point(6, 73);
+            this.comboBox_datalong2.Location = new System.Drawing.Point(6, 72);
             this.comboBox_datalong2.Name = "comboBox_datalong2";
             this.comboBox_datalong2.Size = new System.Drawing.Size(161, 21);
             this.comboBox_datalong2.TabIndex = 14;
@@ -314,7 +318,7 @@
             this.textBox_datalong.Name = "textBox_datalong";
             this.textBox_datalong.Size = new System.Drawing.Size(100, 20);
             this.textBox_datalong.TabIndex = 0;
-            this.textBox_datalong.Leave += new System.EventHandler(this.txtBox_leave);
+            this.textBox_datalong.Leave += new System.EventHandler(this.button_delete_event_Click);
             // 
             // groupBoxDataInt
             // 
@@ -580,11 +584,12 @@
             // comboBox_datalong3
             // 
             this.comboBox_datalong3.FormattingEnabled = true;
-            this.comboBox_datalong3.Location = new System.Drawing.Point(6, 115);
+            this.comboBox_datalong3.Location = new System.Drawing.Point(6, 114);
             this.comboBox_datalong3.Name = "comboBox_datalong3";
             this.comboBox_datalong3.Size = new System.Drawing.Size(161, 21);
             this.comboBox_datalong3.TabIndex = 16;
             this.comboBox_datalong3.Visible = false;
+            this.comboBox_datalong3.SelectedIndexChanged += new System.EventHandler(this.comboBox_datalong3_SelectedIndexChanged);
             // 
             // label_datalong3
             // 
@@ -594,6 +599,24 @@
             this.label_datalong3.Size = new System.Drawing.Size(56, 13);
             this.label_datalong3.TabIndex = 15;
             this.label_datalong3.Text = "Datalong3";
+            // 
+            // button_datalong3
+            // 
+            this.button_datalong3.Location = new System.Drawing.Point(56, 115);
+            this.button_datalong3.Name = "button_datalong3";
+            this.button_datalong3.Size = new System.Drawing.Size(50, 20);
+            this.button_datalong3.TabIndex = 18;
+            this.button_datalong3.Text = "Select";
+            this.button_datalong3.UseVisualStyleBackColor = true;
+            this.button_datalong3.Visible = false;
+            // 
+            // textBox_datalong3
+            // 
+            this.textBox_datalong3.Location = new System.Drawing.Point(6, 114);
+            this.textBox_datalong3.Name = "textBox_datalong3";
+            this.textBox_datalong3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_datalong3.TabIndex = 17;
+            this.textBox_datalong3.Leave += new System.EventHandler(this.txtBox_leave);
             // 
             // DbScriptControl
             // 
@@ -677,5 +700,7 @@
         private System.Windows.Forms.ComboBox comboBox_datalong2;
         private System.Windows.Forms.ComboBox comboBox_datalong3;
         private System.Windows.Forms.Label label_datalong3;
+        private System.Windows.Forms.Button button_datalong3;
+        private System.Windows.Forms.TextBox textBox_datalong3;
     }
 }

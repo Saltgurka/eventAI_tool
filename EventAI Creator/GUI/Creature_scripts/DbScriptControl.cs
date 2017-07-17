@@ -38,6 +38,7 @@ namespace EventAI_Creator
 
             this.textBox_datalong.Text = Data.datalong.ToString();
             this.textBox_datalong2.Text = Data.datalong2.ToString();
+            this.textBox_datalong3.Text = Data.datalong3.ToString();
 
             this.textBox_buddy.Text = Data.buddy.ToString();
             this.textBox_radius.Text = Data.radius.ToString();
@@ -86,11 +87,12 @@ namespace EventAI_Creator
 
             if (textBox_datalong.Text.Length != 0)      Data.datalong = Convert.ToUInt32(textBox_datalong.Text);
             if (textBox_datalong2.Text.Length != 0)     Data.datalong2 = Convert.ToUInt32(textBox_datalong2.Text);
+            if (textBox_datalong3.Text.Length != 0)     Data.datalong3 = Convert.ToUInt32(textBox_datalong3.Text);
 
-            if (textBox_dataint1.Text.Length != 0)      Data.dataint = Convert.ToUInt32(textBox_dataint1.Text);
-            if (textBox_dataint2.Text.Length != 0)      Data.dataint = Convert.ToUInt32(textBox_dataint2.Text);
-            if (textBox_dataint3.Text.Length != 0)      Data.dataint = Convert.ToUInt32(textBox_dataint3.Text);
-            if (textBox_dataint4.Text.Length != 0)      Data.dataint = Convert.ToUInt32(textBox_dataint4.Text);
+            if (textBox_dataint1.Text.Length != 0)      Data.dataint = Convert.ToInt32(textBox_dataint1.Text);
+            if (textBox_dataint2.Text.Length != 0)      Data.dataint = Convert.ToInt32(textBox_dataint2.Text);
+            if (textBox_dataint3.Text.Length != 0)      Data.dataint = Convert.ToInt32(textBox_dataint3.Text);
+            if (textBox_dataint4.Text.Length != 0)      Data.dataint = Convert.ToInt32(textBox_dataint4.Text);
 
             if (textBox_posX.Text.Length != 0)          Data.position_x = float.Parse(textBox_posX.Text, System.Globalization.CultureInfo.InvariantCulture);
             if (textBox_posY.Text.Length != 0)          Data.position_y = float.Parse(textBox_posY.Text, System.Globalization.CultureInfo.InvariantCulture);
@@ -143,15 +145,22 @@ namespace EventAI_Creator
             textBox_dataint2.ReadOnly = true;
             textBox_dataint3.ReadOnly = true;
             textBox_dataint4.ReadOnly = true;
+            label_dataint1.Text = "DataInt1";
+            label_dataint2.Text = "DataInt1";
+            label_dataint3.Text = "DataInt1";
+            label_dataint4.Text = "DataInt1";
+
             textBox_posX.ReadOnly = true;
             textBox_posY.ReadOnly = true;
             textBox_posZ.ReadOnly = true;
             textBox_orientation.ReadOnly = true;
 
+            textBox_datalong3.ReadOnly = false;
             textBox_datalong2.ReadOnly = false;
             textBox_datalong.ReadOnly = false;
             label_datalong.Text = "Datalong";
             label_datalong2.Text = "Datalong2";
+            label_datalong3.Text = "Datalong3";
 
             comboBox_datalong.Visible = false;
             comboBox_datalong2.Visible = false;
@@ -159,9 +168,11 @@ namespace EventAI_Creator
             button_datalong2.Visible = false;
             textBox_datalong.Width = 100;
             textBox_datalong2.Width = 100;
+            textBox_datalong3.Width = 100;
 
             textBox_datalong.Visible = true;
             textBox_datalong2.Visible = true;
+            textBox_datalong3.Visible = true;
 
             comboBox_datalong.Items.Clear();
             comboBox_datalong2.Items.Clear();
@@ -181,6 +192,8 @@ namespace EventAI_Creator
                     textBox_posY.ReadOnly = false;
                     textBox_posZ.ReadOnly = false;
                     textBox_orientation.ReadOnly = false;
+                    textBox_dataint1.ReadOnly = false;
+                    label_dataint1.Text = "Run (1=On, 0=Off)";
                     break;
                 case 8:     // kill credit
                     textBox_datalong2.Visible = false;
@@ -246,12 +259,35 @@ namespace EventAI_Creator
                     comboBox_datalong.SelectedIndex = 0;
                     comboBox_datalong.DropDownStyle = ComboBoxStyle.DropDownList;
                     comboBox_datalong.DropDownWidth = DropDownWidth(comboBox_datalong);
-                    break;      
+                    break;
+                case 42:
+                    textBox_datalong.Visible = false;
+                    comboBox_datalong.Visible = true;
+                    comboBox_datalong.Items.AddRange(Info.Boolean);
+                    comboBox_datalong.SelectedIndex = 0;
+                    comboBox_datalong.DropDownStyle = ComboBoxStyle.DropDownList;
+                    comboBox_datalong.DropDownWidth = DropDownWidth(comboBox_datalong);
+                    textBox_dataint1.ReadOnly = false;
+                    label_dataint1.Text = "Main Hand Slot:";
+                    textBox_dataint2.ReadOnly = false;
+                    label_dataint2.Text = "Off Hand Slot:";
+                    textBox_dataint3.ReadOnly = false;
+                    label_dataint3.Text = "Ranged Slot:";
+                    break;
+                case 44:
+                    textBox_datalong2.Visible = false;
+                    comboBox_datalong2.Visible = true;
+                    comboBox_datalong2.Items.AddRange(Info.AllianceHorde);
+                    comboBox_datalong2.SelectedIndex = 0;
+                    comboBox_datalong2.DropDownStyle = ComboBoxStyle.DropDownList;
+                    comboBox_datalong2.DropDownWidth = DropDownWidth(comboBox_datalong2);
+                    break;
             }
 
             // Set all to 0
             textBox_datalong.Text = "0";
             textBox_datalong2.Text = "0";
+            textBox_datalong3.Text = "0";
 
             textBox_posX.Text = "0";
             textBox_posY.Text = "0";
@@ -274,9 +310,14 @@ namespace EventAI_Creator
             else
                 textBox_datalong2.ReadOnly = true;
 
-            label_source.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 3];
-            label_target.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 4];
-            label_details.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 5];
+            if (Info.ScriptCommands[comboBoxAction.SelectedIndex, 3] != "")
+                label_datalong3.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 3];
+            else
+                textBox_datalong3.ReadOnly = true;
+
+            label_source.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 4];
+            label_target.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 5];
+            label_details.Text = Info.ScriptCommands[comboBoxAction.SelectedIndex, 6];
 
             if (!locked)
                 GetEventData();
@@ -392,6 +433,14 @@ namespace EventAI_Creator
                 GetEventData();
         }
 
+        private void comboBox_datalong3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox_datalong3.Text = comboBox_datalong3.SelectedIndex.ToString();
+
+            if (!locked)
+                GetEventData();
+        }
+
         // Load event flags box
         private void button_datalong2_Click(object sender, EventArgs e)
         {
@@ -417,5 +466,6 @@ namespace EventAI_Creator
                     break;
             }
         }
+
     }
 }

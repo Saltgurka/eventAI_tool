@@ -312,12 +312,13 @@ namespace EventAI_Creator
                         item.command = reader.GetInt32("command");
                         item.datalong = reader.GetUInt32("datalong");
                         item.datalong2 = reader.GetUInt32("datalong2");
+                        item.datalong3 = reader.GetUInt32("datalong3");
                         item.buddy = reader.GetUInt32("buddy_entry");
                         item.radius = reader.GetUInt32("search_radius");
-                        item.dataint = reader.GetUInt32("dataint");
-                        item.dataint2 = reader.GetUInt32("dataint2");
-                        item.dataint3 = reader.GetUInt32("dataint3");
-                        item.dataint4 = reader.GetUInt32("dataint4");
+                        item.dataint = reader.GetInt32("dataint");
+                        item.dataint2 = reader.GetInt32("dataint2");
+                        item.dataint3 = reader.GetInt32("dataint3");
+                        item.dataint4 = reader.GetInt32("dataint4");
                         item.position_x = reader.GetFloat("x");
                         item.position_y = reader.GetFloat("y");
                         item.position_z = reader.GetFloat("z");
@@ -862,6 +863,7 @@ namespace EventAI_Creator
                     copy.line[i].command + "," +
                     copy.line[i].datalong + "," +
                     copy.line[i].datalong2 + "," +
+                    copy.line[i].datalong3 + "," +
                     copy.line[i].buddy + "," +
                     copy.line[i].radius + "," +
                     copy.line[i].dataflags + "," +
