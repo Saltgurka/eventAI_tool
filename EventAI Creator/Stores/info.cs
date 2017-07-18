@@ -364,7 +364,7 @@ namespace EventAI_Creator
         public static string[,] ScriptCommands = new string[,]
         {
             // command name            // datalong     // datalong2         // datalong3       // source       // target       // command add              // details
-/* 0 */     {"0. TALK",                "ChatType",     "language",          "",                "WorldObject*", "Unit/none*",   "",                         "Creature say/whisper/yell/textemote."},
+/* 0 */     {"0. TALK",                "dbscript_string_template ID","",    "",                "WorldObject*", "Unit/none*",   "",                         "Creature say/whisper/yell/textemote."},
 /* 1 */     {"1. EMOTE",               "emote_id",     "",                  "",                "Unit*",        "Unit/none*",   "",                         "Play emote on creature."},
 /* 2 */     {"2. FIELD_SET",           "field_id",     "field value",       "",                "any",          "",             "",                         "Change the value at an index for the unit."},
 /* 3 */     {"3. MOVE_TO",             "",             "travel_speed",      "",                "Creature*",    "",             "teleport unit to position","Relocate creature to a destination"},

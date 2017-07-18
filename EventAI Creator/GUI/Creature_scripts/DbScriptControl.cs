@@ -184,6 +184,10 @@ namespace EventAI_Creator
                     textBox_dataint2.ReadOnly = false;
                     textBox_dataint3.ReadOnly = false;
                     textBox_dataint4.ReadOnly = false;
+                    label_dataint1.Text = "Text ID 1";
+                    label_dataint2.Text = "Text ID 2";
+                    label_dataint3.Text = "Text ID 3";
+                    label_dataint4.Text = "Text ID 4";
                     break;
                 case 3:     // move
                 case 6:     // teleport
