@@ -864,18 +864,18 @@ namespace EventAI_Creator
                     copy.line[i].datalong + "," +
                     copy.line[i].datalong2 + "," +
                     copy.line[i].datalong3 + "," +
-                    copy.line[i].buddy + "," +
-                    copy.line[i].radius + "," +
-                    copy.line[i].dataflags + "," +
                     copy.line[i].dataint + "," +
                     copy.line[i].dataint2 + "," +
                     copy.line[i].dataint3 + "," +
                     copy.line[i].dataint4 + "," +
+                    copy.line[i].buddy + "," +
+                    copy.line[i].radius + "," +
+                    copy.line[i].dataflags + ",'" +
+                    MySqlHelper.EscapeString(copy.line[i].comment) + "'," +
                     copy.line[i].position_x + "," +
                     copy.line[i].position_y + "," +
                     copy.line[i].position_z + "," +
-                    copy.line[i].orientation + ",'" +
-                    MySqlHelper.EscapeString(copy.line[i].comment) + "')";
+                    copy.line[i].orientation + ")";
                     if (i + 1 < copy.line.Count)
                         lines = lines + ",\r\n";
                     else
@@ -888,7 +888,7 @@ namespace EventAI_Creator
             if (customquery.Length != 0)
                 result = customquery;
             else if (lines.Length != 0)
-                result = "INSERT INTO " + table + " VALUES \r\n" + lines;
+                result = "INSERT INTO " + table + " (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES \r\n" + lines;
 
                 return result;
         }
