@@ -46,6 +46,7 @@ namespace EventAI_Creator
 /*30 | 31*/{"30. RECEIVE_AI_EVENT","AIEventType","SenderEntry","","","Expires when the creature receives an AIEvent of type (Param1), sent by creature (Param2 != 0). If (Param2 = 0) then sent by any creature"},
 /*31 | 32*/{"31. ENERGY","EnergyMax","EnergyMin","RepeatMin","RepeatMax","Expires once Energy% is between (Param1) and (Param2). Will repeat every (Param3) and (Param4)."},
 /*32 | 33*/{"32. EVENT_T_SELECT_ATTACKING_TARGET","MinRange","MaxRange","RepeatMin","RepeatMax","Expires when the NPC has a target in threat table further than Param1 and closer than Param2. First time happens after and will repeat after Param3 and Param4." },
+/*33 | 34*/{"33. EVENT_T_FACING_TARGET","BackOrFront","","RepeatMin","RepeatMax","Expires when the NPC is in back (Param1=0) or in front (Param1=1) of its current target. Will repeat after Param3 and Param4." },
         };
 
         public static string[,] ActionListInfo = new string[,]
@@ -103,6 +104,10 @@ namespace EventAI_Creator
 /*50 | 01 */{"50. SET_REACT_STAT","ReactState","","","Change react state of the creature" },
 /*51 | 01 */{"51. PAUSE_WAYPOINTS","DoPause","","","Pause waypoints of creature" },
 /*52 | 01 */{"52. INTERRUPT_SPELL","SpellType - CurrentSpellTypes","","","Interrupt spell in given slot for creature" },
+/*53 | 01 */{"53. ACTION_T_START_RELAY_SCRIPT","RelayIDorTemplate","Target","","Launches dbscripts_on_relay script, either static one, or when param1 is < 0 then random one chosen from dbscript_random_templates" },
+/*54 | 01 */{"54. ACTION_T_TEXT_NEW","TextId","Target","TemplateId","Displays text, either static one or when param3 != 0, then random one chosen from dbscript_random_templates" },
+/*55 | 01 */{"55. ACTION_T_ATTACK_START","Target","","","Attacks targeted creature" },
+/*56 | 01 */{"56. ACTION_T_DESPAWN_GUARDIANS","EntryId","","","Despawns guardian with specified entry, or if 0 despawns all guardians" },
         };
 
         public static string[] EventFlags = new string[]
