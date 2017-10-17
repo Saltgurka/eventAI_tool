@@ -1282,6 +1282,7 @@
             this.PhaseCheckBox00.TabIndex = 69;
             this.PhaseCheckBox00.Text = "00";
             this.PhaseCheckBox00.UseVisualStyleBackColor = true;
+            this.PhaseCheckBox00.CheckedChanged += new System.EventHandler(this.control_changed);
             // 
             // EventControl
             // 

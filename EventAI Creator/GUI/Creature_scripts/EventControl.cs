@@ -1087,7 +1087,8 @@ namespace EventAI_Creator
 
         private void control_changed(object sender, EventArgs e)
         {
-            // Nothing heres
+            if (!locked)
+                GetEventData();
         }
 
         // Handle if the text is number
